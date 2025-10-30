@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Anupam Yadav Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="images/icona.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffc107;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ffc107;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Anupam Yadav</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Anupam Yadav</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'CS Student  ',
+						'Web Developer  ',
+						'UI/UX Designer   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Web Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/anupamyadavanurag/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/AnupamYadavAnurag" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Anupam Yadav</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Web Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>Prayagraj, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>HTML</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>CSS</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JavaScript</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>React.js</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>DBMS</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>a passionate Computer Science student at United University, driven by a deep curiosity for technology, innovation, and problem-solving. I’m currently focused on Web Development, and Artificial Intelligence, with hands-on experience in building responsive web applications and exploring smart systems.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Web Devlopment</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Aspiring Full Stack Web Development</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Pursuing Bachelor of Computer Application</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>GitHub, VS Code &amp; Linux</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Python, HTML, CSS, JavaScript, React, DBMS, OOPS  &amp; DSA</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Web Development, AI, Travel Photography</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+								</p>
+								<p><a href="https://www.linkedin.com/in/anupamyadavanurag/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Computer Science student with a passion for Web Development, AI, and ML. Skilled in Python, HTML, CSS, JavaScript, React, 
+and SQL. Quick learner, creative thinker, and team player, eager to build impactful tech solutions.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">06/2025-08/2025</span>
+						<h2>Web Developer Intern</h2>
+						<span class="position">Code Resite</span>
+						<p class="mt-4">CodeResite is an all-in-one digital platform offering smart tools, AI automation, development, and cybersecurity solutions for students, marketers, and creators. 
+							<ul>
+								<li>Built responsive web interfaces using HTML, CSS, JavaScript, and React.</li>
+								<li>Used Git and GitHub for version control, actively participating in code pushes, pull requests, and peer reviews.</li>
+								<li>Gained exposure to deployment workflows, hosting environments, and real-time bug tracking using developer tools.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">02/2025-05/2025</span>
+						<h2>Campus Ambassador</h2>
+						<span class="position">Vidhun LEarnfy</span>
+						<p class="mt-4">Vidhun LEarnify is a an etech platfrom providing practial, industry-ready skills Development through Online course and interactive learning.
+							<ul>
+								<li>Iniated and organized multiple student focused workshops, Including, Resume Bulding, linkedIn Profile Optimization, How to Crack Interviews, and Beyond Degree: Soft Skills That Set You Apart.</li>
+								<li>Built a strong student network and encouraged peer participation in training and internship opportunities.</li>
+								<li>Gained experience in marketing, communication, and leadership as part of your role.
+
+</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-2027</span>
+    					<h2>Bachelor of Computer Application</h2>
+    					<span class="position">United University</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2024</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">National Collage Handia</span>
+    					<p class="mt-4">Grade: First class.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1Xbof3WcjmR62cEi3FKQMRCtGS8KO9rAg/view?usp=drive_link" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Web Devlopment projects on HTML, CSS, JavaScript, React & MySql.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://anupamyadavanurag.github.io/Headphone-website/" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AnupamYadavAnurag/Headphone-website">Headphone landing page with HTML, CSS, JavaScript</a></h3>
+                <p>Built a stylish, responsive Headphone landing page with HTML, CSS, JavaScript, featuring smooth scroll, interactive 
+layout, and product-focused design. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://anupamyadavanurag.github.io/" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AnupamYadavAnurag/AnupamYadavAnurag.github.io/blob/main/index.html"> Personal portfolio website to showcase my skills, projects, and contact 
+information.</a></h3>
+                <p>The website was developed using HTML, CSS, and JavaScript, with layout handled by Flexbox and Grid, and version 
+controlled via Git and GitHub using VS Code. </p>
+              </div>
+            </div>
+          </div>
+			 <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/AnupamYadavAnurag/Virtual_Calculator" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AnupamYadavAnurag/Virtual_Calculator/blob/main/venv/main.py">Virtual Calculator: A Touchless, Gesture-Controlled Computing Interface</a></h3>
+                <p>A Virtual Calculator is a touchless calculator that uses a webcam and hand gesture recognition to perform real-time mathematical operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+		   <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://anupamyadavanurag.github.io/Smart-Study-Planner/" class="block-20 zoom-effect" style="background-image: url('images/Project 4.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/AnupamYadavAnurag/Smart-Study-Planner/blob/main/index.html">Smart Study Planner: A web app to organize and track your study schedule efficiently.</a></h3>
+                <p>The Smart Study Planner is allows users to create, manage, and track their daily study plans, ensuring better time management and productivity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+
+
+    
+  
+	<section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certificates</h1>
+            <h2 class="mb-4">Certificates</h2>
+            <p>sghdfj asjdfbweur sdfhwebrjskfs </p>
+          </div>
+		   <br>
+		   <br>
+
+
+  <div class="certificate-grid" id="123">
+
+<div class="certificate-card">
+  <img src="Certificate/Google.jpg" alt="Google Data Analytic">
+  <div class="certificate-info">
+    <h3>Google Data Analytic</h3>
+    <p>Acquired hands-on experience in data analysis, visualization, and cloud-based analytics using Google tools and platforms.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/VirtualLab.jpg" alt="Virtual Labs Workshop">
+  <div class="certificate-info">
+    <h3>Virtual Labs Workshop</h3>
+    <p>Organized by IIT Delhi & United University – enhanced practical understanding of Data Structures and Digital Logic Design through simulations.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/IBM WDF.jpg" alt="Web Development Fundamentals IBM">
+  <div class="certificate-info">
+    <h3>Web Development Fundamentals – IBM</h3>
+    <p>Learned the essentials of front-end and back-end web development including HTML, CSS, JavaScript, and web hosting practices.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Mastering Generative AI.jpg" alt="Mastering Generative AI">
+  <div class="certificate-info">
+    <h3>Mastering Generative AI</h3>
+    <p>Explored the world of AI creativity — learned prompt engineering, generative models, and real-world use cases with ChatGPT and Gemini.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/LinkedlnMC.jpg" alt="LinkedIn Mastery Workshop">
+  <div class="certificate-info">
+    <h3>LinkedIn Mastery Workshop</h3>
+    <p>Gained expertise in personal branding, optimizing LinkedIn profiles, and building a professional network for career growth.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Python.jpg" alt="Python Bootcamp">
+  <div class="certificate-info">
+    <h3>Python Bootcamp</h3>
+    <p>Developed strong Python fundamentals with practical projects in automation, data handling, and algorithmic problem-solving.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/React.jpg" alt="React Bootcamp">
+  <div class="certificate-info">
+    <h3>React Bootcamp</h3>
+    <p>Built interactive and scalable web applications using React.js, components, hooks, and API integrations for modern UI development.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Quiz.jpg" alt="Quiz Competition">
+  <div class="certificate-info">
+    <h3>Quiz Competition</h3>
+    <p>Achieved 1st position in a technical quiz event, showcasing deep understanding of programming concepts and IT knowledge.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/PythonFunda1.jpg" alt="Python Fundamentals By Infosys Springboard Part 1">
+  <div class="certificate-info">
+    <h3>Python Fundamentals – Infosys Springboard (Part 1)</h3>
+    <p>Covered Python basics including syntax, loops, conditionals, and data handling — forming a solid programming foundation.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/PythonFunda.jpg" alt="Python Fundamentals By Infosys Springboard Part 2">
+  <div class="certificate-info">
+    <h3>Python Fundamentals – Infosys Springboard (Part 2)</h3>
+    <p>Advanced into OOPs, database operations, and modular programming, enhancing software development proficiency in Python.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/SEInfosy.jpg" alt="Software Engineering - Infosys">
+  <div class="certificate-info">
+    <h3>Software Engineering – Infosys Springboard</h3>
+    <p>Learned SDLC, Agile methodologies, and software testing techniques used in modern software development environments.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/OOPSP.jpg" alt="OOPs Using Python By Infosys Springboard">
+  <div class="certificate-info">
+    <h3>OOPs Using Python – Infosys Springboard</h3>
+    <p>Understood core OOP principles like inheritance, encapsulation, and polymorphism through practical Python-based projects.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/GGHUB.jpg" alt="Git & GitHub Bootcamp">
+  <div class="certificate-info">
+    <h3>Git & GitHub Bootcamp</h3>
+    <p>Mastered version control with Git, collaborating effectively on open-source projects and managing repositories on GitHub.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Gemini.jpg" alt="GeminiXplore">
+  <div class="certificate-info">
+    <h3>GeminiXplore</h3>
+    <p>Explored Google’s Gemini AI platform and its potential in content generation, data analytics, and AI-driven innovation.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/FundaWApps.png" alt="Fundamentals of Web Application">
+  <div class="certificate-info">
+    <h3>Fundamentals of Web Application</h3>
+    <p>Learned core web concepts including HTTP, front-end structure, and user interface principles for web-based systems.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/EFWD.png" alt="Front-End Web Development">
+  <div class="certificate-info">
+    <h3>Front-End Web Development</h3>
+    <p>Created responsive and user-friendly interfaces using HTML, CSS, JavaScript, and modern design frameworks.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/DSA1.jpg" alt="Data Structures & Algorithms Part 1">
+  <div class="certificate-info">
+    <h3>Data Structures & Algorithms – Part 1</h3>
+    <p>Mastered foundational DSA concepts including arrays, stacks, queues, and linked lists through coding exercises.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/DSA2.jpg" alt="Data Structures & Algorithms Part 2">
+  <div class="certificate-info">
+    <h3>Data Structures & Algorithms – Part 2</h3>
+    <p>Explored advanced topics like trees, graphs, and recursion to improve problem-solving and optimization skills.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Debate.jpg" alt="Debate Competition">
+  <div class="certificate-info">
+    <h3>Debate Competition</h3>
+    <p>Demonstrated strong communication, critical thinking, and teamwork in an inter-university debate competition.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/DBMS1.jpg" alt="Database Management Systems Part 1">
+  <div class="certificate-info">
+    <h3>Database Management Systems – Part 1</h3>
+    <p>Learned fundamentals of database design, ER diagrams, normalization, and SQL query formulation.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/DBMS2.jpg" alt="Database Management Systems Part 2">
+  <div class="certificate-info">
+    <h3>Database Management Systems – Part 2</h3>
+    <p>Developed advanced SQL queries, implemented joins, triggers, and handled database transactions efficiently.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/WebDevelopment.jpg" alt="Web Development Workshop">
+  <div class="certificate-info">
+    <h3>Web Development Workshop</h3>
+    <p>Designed and deployed full-stack web projects integrating front-end and back-end technologies.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/DSA.jpg" alt="DSA Decode Webinar">
+  <div class="certificate-info">
+    <h3>DSA Decode Webinar</h3>
+    <p>Improved coding logic and analytical thinking through live sessions focused on real-world DSA problem-solving.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/CyberR.jpg" alt="Cybersecurity Essentials">
+  <div class="certificate-info">
+    <h3>Cybersecurity Essentials</h3>
+    <p>Studied ethical hacking, data protection, and cyber-attack prevention to strengthen online security awareness.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/Code Resite.jpg" alt="Code Resite Internship">
+  <div class="certificate-info">
+    <h3>Code Resite Internship</h3>
+    <p>Contributed to a coding internship program by building innovative software prototypes and teamwork projects.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/BITBYBIT.jpg" alt="HackDiwas Hackathon">
+  <div class="certificate-info">
+    <h3>HackDiwas Hackathon</h3>
+    <p>Collaborated with peers to create a working tech solution under time constraints, showcasing innovation and teamwork.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/AI HP.jpg" alt="AI Foundations - HP">
+  <div class="certificate-info">
+    <h3>AI Foundations – HP</h3>
+    <p>Explored machine learning, natural language processing, and AI-powered automation fundamentals.</p>
+  </div>
+</div>
+
+<div class="certificate-card">
+  <img src="Certificate/NoSQL.jpg" alt="NoSQL Databases">
+  <div class="certificate-info">
+    <h3>NoSQL Databases</h3>
+    <p>Developed skills in non-relational database design using MongoDB and document-based data models for scalability.</p>
+  </div>
+</div>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="Certificate Preview">
+  </div>
+
+
+		<!-- added justify-content-center to center align the last two projects -->
+		
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2100">0</strong>
+                <span>Professional connections</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="400">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	<!-- Video Background Section -->
+<div class="ftco-section ftco-hireme img margin-top video-section">
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="bg-video">
+    <source src="videos/background.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Foreground Content -->
+  <div class="video-content">
+    <div class="row justify-content-center">
+      <div class="col-md-7 ftco-animate text-center">
+        <h2>Eager to build impactful tech solutions <span>GitHub</span></h2>
+        <div class="heading">
+          <h4>I love tackling challenging problems and turning them into innovative solutions.</h4>
+          <br>
+          <p><a href="https://github.com/anupamyadavanurag" class="btn btn-primary py-3 px-5">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Prayagraj, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+916392688212</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+				<p><a href="mailto:anup888ya@gmail.com">anup888ya@gmail.com</a></p>
+
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1Xbof3WcjmR62cEi3FKQMRCtGS8KO9rAg/view?usp=drive_link">Anupam Resume</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/FWzpRqSiNRK5SKbi6" class="btn btn-primary py-3 px-5">Message Me</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/anupamyadavanurag/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/Anuragyadav2215"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/anupam.yadavanurag"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/anupamyadavanurag/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+
+   <script>
+    const certificateImages = document.querySelectorAll(".certificate-card img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const closeBtn = document.getElementById("closeBtn");
+
+    certificateImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+    closeBtn.addEventListener("click", () => { lightbox.style.display = "none"; });
+    lightbox.addEventListener("click", e => { if (e.target !== lightboxImg) lightbox.style.display = "none"; });
+  </script>
+    
+  </body>
+</html>
