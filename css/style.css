@@ -9782,17 +9782,28 @@ textarea.form-control {
       align-items: center;
       animation: fadeIn 0.3s ease;
     }
-    .video-container {
+   /* SAME height as image card */
+.block-20.video-container {
+  display: block;
   width: 100%;
-  height: 250px;
+  height: 250px;   /* IMPORTANT */
   position: relative;
   overflow: hidden;
 }
 
-.video-container iframe {
+/* iframe full cover */
+.block-20.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* text spacing fix */
+.blog-entry .text {
+  margin-top: 15px;   /* adjust if needed */
 }
 
     .lightbox img {
